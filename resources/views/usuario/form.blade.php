@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <h2>{{$modo}} usuario.</h2>
+    <h2>{{$modo}} Usuario.</h2>
 
     @if (count($errors)>0)
         <div class="alert alert-danger" role="alert">

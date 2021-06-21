@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-06-2021 a las 07:16:53
+-- Tiempo de generación: 21-06-2021 a las 08:05:15
 -- Versión del servidor: 10.4.19-MariaDB
 -- Versión de PHP: 8.0.6
 
@@ -57,7 +57,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2021_06_05_050233_create_empleados_table', 2);
+(4, '2021_06_05_050233_create_empleados_table', 2),
+(5, '2021_06_17_145747_create_usuarios_table', 3);
 
 -- --------------------------------------------------------
 
@@ -105,8 +106,9 @@ CREATE TABLE `usuarios` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `Nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `Apellidos` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `Photo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Documento` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Codigo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Nacimiento` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -115,11 +117,8 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `Nombre`, `Apellidos`, `Email`, `Photo`, `created_at`, `updated_at`) VALUES
-(9, 'Delmerk', 'Escobar Solarte', 'delmerk@gmail.com', 'uploads/HBbo9GHba72ApgN5yq6cqpGNB7aV0AEfF6LXUQ8m.jpg', NULL, '2021-06-10 11:48:39'),
-(11, 'Edit', 'Editt', 'e@d.com', 'uploads/jcG4FycHpD62wciNzde0LHxUPy7ErSs916HlLNTb.jpg', NULL, '2021-06-07 08:00:22'),
-(12, 'e', 'e', 'ee@ss.com', 'uploads/bRCO5hD3wHTYEPVh8LTQpqr5he868uIxKU9p9QHk.jpg', NULL, '2021-06-06 07:49:23'),
-(13, 'Delmerk', 'Escobar', 'delmerk@gmail.com', 'uploads/TvxO1FdW4nkAfTyntXono6fZnB2ZPkF4WWa7Rgv2.jpg', NULL, NULL);
+INSERT INTO `usuarios` (`id`, `Nombre`, `Apellidos`, `Documento`, `Codigo`, `Nacimiento`, `created_at`, `updated_at`) VALUES
+(1, 'Mariana', 'Mariana', '74185963', '98456', '2222-02-01', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -171,7 +170,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -183,7 +182,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

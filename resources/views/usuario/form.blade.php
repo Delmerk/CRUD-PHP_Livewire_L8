@@ -16,28 +16,28 @@
 <div class="row">
         <div class="col">
             <label for="Nombre">Nombre: </label>
-            <input type="text" name="Nombre" value="{{ isset($usuario->Nombre)?$usuario->Nombre:'' }}"  class="form-control">
+            <input type="text" name="Nombre" value="{{ isset($usuario->Nombre)?$usuario->Nombre:old('Nombre') }}"  class="form-control">
         </div>
         
         <div class="col">
             <label for="Apellidos">Apellidos: </label>
-            <input type="text" name="Apellidos" value="{{ isset($usuario->Apellidos)?$usuario->Apellidos:'' }}" class="form-control">
+            <input type="text" name="Apellidos" value="{{ isset($usuario->Apellidos)?$usuario->Apellidos:old('Apellidos') }}" class="form-control">
         </div>
 </div>
 <div class="row">
         <div class="col">
             <label for="Documento">Documento: </label>
-            <input type="text" name="Documento" value="{{ isset($usuario->Documento)?$usuario->Documento:'' }}" class="form-control">
+            <input type="text" name="Documento" value="{{ isset($usuario->Documento)?$usuario->Documento:old('Documento') }}" class="form-control">
         </div>
         
         <div class="col">
             <label for="Codigo">Codigo: </label>
-            <input type="text" name="Codigo" value="{{ isset($usuario->Codigo)?$usuario->Codigo:'' }}" class="form-control">
+            <input type="text" name="Codigo" value="{{ isset($usuario->Codigo)?$usuario->Codigo:old('Codigo') }}" class="form-control">
         </div>
 
         <div class="col">
             <label for="Nacimiento">Nacimiento: </label>
-            <input type="date" name="Nacimiento" value="{{ isset($usuario->Nacimiento)?$usuario->Nacimiento:'' }}" class="form-control">
+            <input type="date" name="Nacimiento" value="{{ isset($usuario->Nacimiento)?$usuario->Nacimiento:old('Nacimiento') }}" class="form-control">
         </div>
 </div> 
 <div class="container">

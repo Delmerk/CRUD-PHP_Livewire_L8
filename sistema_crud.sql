@@ -118,7 +118,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `Nombre`, `Apellidos`, `Documento`, `Codigo`, `Nacimiento`, `created_at`, `updated_at`) VALUES
-(1, 'Mariana', 'Mariana', '74185963', '98456', '2222-02-01', NULL, NULL);
+(1, 'Galatea', '', '1234567', '7337', '2000-02-01', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
